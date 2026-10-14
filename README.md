@@ -29,4 +29,5 @@ The full requirements are in the RFP: [ie04_project2026_RFP.pdf](ie04_project202
 ## Repository layout
 
 - `ie04_project2026_RFP.pdf` – Request for Proposals
-- `week-1/` – week 1 work
+- `week-1/` – GitHub setup, team forming, RFP
+- `week-2/` – product backlog

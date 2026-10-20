@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+    <g id="actor" stroke-width="1.5" fill="none">
+      <circle cx="0" cy="-30" r="10"/><line x1="0" y1="-20" x2="0" y2="10"/>
+      <line x1="-16" y1="-10" x2="16" y2="-10"/><line x1="0" y1="10" x2="-13" y2="32"/><line x1="0" y1="10" x2="13" y2="32"/>
+    </g>
+  </defs>
+  <rect width="1100" height="700" fill="#fff"/>
+
+  <!-- System boundary -->
+  <rect x="250" y="40" width="600" height="630" rx="8" fill="#fcfcfc" stroke="#555" stroke-width="1.5"/>
+  <text x="550" y="66" text-anchor="middle" font-weight="bold" font-size="15">Lab Student Management System</text>
+
+  <!-- Actors -->
+  <use href="#actor" x="110" y="230" stroke="#2e7d32"/>
+  <text x="110" y="282" text-anchor="middle" font-weight="bold">Instructor</text>
+  <use href="#actor" x="110" y="440" stroke="#1565c0"/>
+  <text x="110" y="492" text-anchor="middle" font-weight="bold">Sub-instructor</text>
+  <use href="#actor" x="990" y="330" stroke="#6a1b9a"/>
+  <text x="990" y="382" text-anchor="middle" font-weight="bold">Student</text>
+
+  <!-- Associations (solid lines, no arrow) -->
+  <g stroke="#333" stroke-width="1.2" fill="none">
+    <line x1="128" y1="215" x2="300" y2="120"/>
+    <line x1="128" y1="218" x2="300" y2="190"/>
+    <line x1="128" y1="222" x2="300" y2="260"/>
+    <line x1="128" y1="228" x2="300" y2="340"/>
+    <line x1="128" y1="235" x2="300" y2="520"/>
+    <line x1="128" y1="210" x2="580" y2="215"/>
+    <line x1="128" y1="240" x2="585" y2="315"/>
+    <line x1="128" y1="440" x2="305" y2="525"/>
+    <line x1="128" y1="420" x2="600" y2="345"/>
+    <line x1="972" y1="315" x2="815" y2="215"/>
+    <line x1="972" y1="320" x2="815" y2="320"/>
+    <line x1="972" y1="330" x2="815" y2="425"/>
+    <line x1="972" y1="340" x2="815" y2="540"/>
+  </g>
+
+  <!-- Use cases -->
+  <g stroke-width="1.5" fill="#d5e8d4" stroke="#82b366">
+    <ellipse cx="400" cy="120" rx="110" ry="26"/>
+    <ellipse cx="400" cy="190" rx="110" ry="26"/>
+    <ellipse cx="400" cy="260" rx="110" ry="26"/>
+    <ellipse cx="400" cy="340" rx="110" ry="26"/>
+    <ellipse cx="400" cy="440" rx="110" ry="26"/>
+    <ellipse cx="400" cy="520" rx="110" ry="26"/>
+    <ellipse cx="700" cy="215" rx="120" ry="26"/>
+    <ellipse cx="700" cy="320" rx="120" ry="26"/>
+  </g>
+  <ellipse cx="700" cy="425" rx="120" ry="26" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+  <ellipse cx="700" cy="540" rx="120" ry="26" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.5"/>
+  <g text-anchor="middle">
+    <text x="400" y="125">Register student</text>
+    <text x="400" y="195">Manage project</text>
+    <text x="400" y="265">Set milestone</text>
+    <text x="400" y="345">Schedule meeting</text>
+    <text x="400" y="445">Suggest free slots</text>
+    <text x="400" y="525">Enter available slots</text>
+    <text x="700" y="220">Enter class timetable</text>
+    <text x="700" y="325">View project status</text>
+    <text x="700" y="430">Export schedule (.ics)</text>
+    <text x="700" y="545">Get reminder</text>
+  </g>
+
+  <!-- include / extend (dashed arrows) -->
+  <g stroke="#333" stroke-width="1.2" stroke-dasharray="5 4" fill="none" marker-end="url(#ar)">
+    <line x1="400" y1="366" x2="400" y2="412"/>
+    <line x1="700" y1="399" x2="700" y2="348"/>
+  </g>
+  <g font-size="12" fill="#444">
+    <text x="408" y="394">«include»</text>
+    <text x="708" y="380">«extend»</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(870,600)" font-size="12">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#333"/><text x="38" y="4">user uses function</text>
+    <line x1="0" y1="22" x2="30" y2="22" stroke="#333" stroke-dasharray="5 4" marker-end="url(#ar)"/><text x="38" y="26">«include» / «extend»</text>
+    <ellipse cx="15" cy="46" rx="14" ry="8" fill="#d5e8d4" stroke="#82b366"/><text x="38" y="50">Must</text>
+    <ellipse cx="105" cy="46" rx="14" ry="8" fill="#dae8fc" stroke="#6c8ebf"/><text x="128" y="50">Should</text>
+    <ellipse cx="15" cy="68" rx="14" ry="8" fill="#ffe6cc" stroke="#d79b00"/><text x="38" y="72">Could</text>
+  </g>
+</svg>

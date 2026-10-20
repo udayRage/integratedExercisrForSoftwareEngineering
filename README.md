@@ -31,3 +31,4 @@ The full requirements are in the RFP: [ie04_project2026_RFP.pdf](ie04_project202
 - `ie04_project2026_RFP.pdf` – Request for Proposals
 - `week-1/` – GitHub setup, team forming, RFP
 - `week-2/` – product backlog
+- `week-3/` – phase backlog, use-case diagram, class diagram

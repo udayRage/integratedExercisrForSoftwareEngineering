@@ -2,10 +2,11 @@
 
 **Goal this week:** decide **what to build in Phase 1**, and draw the first models.
 
-**Deliverables (3):**
+**Deliverables (4):**
 1. **Phase backlog** – the stories we build in Phase 1
 2. **Use-case diagram** – who uses which function
 3. **Class diagram (model)** – what data the system keeps
+4. **Framework + "Hello World"** – choose the backend, frontend and database, and run a first page
 
 Phase 1 demo is on **Nov. 4 (week 5)**. You need **working code** by then.
 
@@ -14,6 +15,8 @@ flowchart LR
     PB["Product backlog<br/>(week 2)"] --> PH["Phase backlog"]
     PH --> UC["Use-case diagram"]
     PH --> CL["Class diagram"]
+    PH --> FW["Framework +<br/>Hello World"]
+    FW --> W4
     UC --> W4["Week 4:<br/>design + code"]
     CL --> W4
 ```
@@ -155,7 +158,59 @@ classDiagram
 
 ---
 
-## 4. Tools
+## 4. Framework and "Hello World"
+
+Before you write real features, choose the **three parts** of the system and check they run.
+
+```mermaid
+flowchart LR
+    F["Frontend<br/>(HTML page in the browser)"] <-- "request / response" --> B["Backend server<br/>(software web server)"]
+    B <-- "read / write" --> D[("Database")]
+```
+
+| Part | What it is | Example choices |
+|------|-----------|-----------------|
+| **(i) Backend server** | The **software web server**. It gets requests from the browser, runs the program logic, and sends back pages or data | Python + Flask, Node.js + Express, Java + Spring Boot |
+| **(ii) Frontend** | The **HTML** page the user sees in the browser (HTML, CSS, JavaScript) | Plain HTML, or React / Vue |
+| **(iii) Database** | Keeps the data (students, projects, milestones) | SQLite (easy), PostgreSQL, MySQL |
+
+**Steps:**
+1. As a team, choose **one** tool for each part. Pick what **most members** know.
+2. Write the choices and the **reason** in the README.
+3. One member makes the **project folder** with the framework and pushes it.
+4. **Every member** pulls it and runs it on **their own PC**.
+5. Each member opens the browser and sees **"Hello World"**. Then the setup works for everyone.
+
+**Example: Hello World with Python + Flask**
+
+```python
+# app.py
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "<h1>Hello World</h1>"
+
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+
+```text
+pip install flask
+python app.py
+# open http://127.0.0.1:5000 in the browser → "Hello World"
+```
+
+**Check:**
+- The page comes from **your backend server**, not from opening the HTML file directly.
+- The server can **connect to the database** (e.g. create one empty table).
+- Write the run commands in a **"How to run"** section of the README.
+
+---
+
+## 5. Tools
 
 | Tool | Good for | Link |
 |------|----------|------|
@@ -165,13 +220,15 @@ classDiagram
 
 Save the diagram **file** (`.drawio`, `.puml`) **and** an **image** (`.png`/`.svg`) in the repository.
 
-## 5. Checklist before you submit
+## 6. Checklist before you submit
 
 - [ ] Phase backlog: stories, tasks, owners, due dates
 - [ ] Phase 1 stories make one **working flow** for the demo
 - [ ] Use-case diagram: actors outside, use cases inside the system box
 - [ ] Every Phase 1 story has a use case
 - [ ] Class diagram: classes, attributes, relations with numbers
+- [ ] Backend server, frontend and database are chosen (with reason)
+- [ ] Every member sees "Hello World" in the browser on their own PC
 - [ ] All files are in the repository
 
 ---
@@ -187,6 +244,8 @@ Save the diagram **file** (`.drawio`, `.puml`) **and** an **image** (`.png`/`.sv
 - UML use-case diagrams (detailed): https://www.uml-diagrams.org/use-case-diagrams.html
 - UML class diagrams (detailed): https://www.uml-diagrams.org/class-diagrams-overview.html
 - Atlassian – Sprint (phase) backlog: https://www.atlassian.com/agile/scrum/sprint-backlog
+- MDN – Client-server overview: https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview
+- Flask quickstart (Hello World): https://flask.palletsprojects.com/en/stable/quickstart/
 
 **Course**
 - RFP: [../ie04_project2026_RFP.pdf](../ie04_project2026_RFP.pdf)

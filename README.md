@@ -36,3 +36,5 @@ The full requirements are in the RFP: [ie04_project2026_RFP.pdf](ie04_project202
 - `week-5/` – Phase 1 demo, tests, retrospective, Phase 2 plan
 - `week-6/` – Phase 2 backlog, updated models, scheduling design
 - `week-7/` – scheduling code, .ics export, automated tests
+- `week-8/` – Phase 2 demo, retrospective, Phase 3 plan
+- `week-9/` – login and roles, status pages, extra function, handover checks

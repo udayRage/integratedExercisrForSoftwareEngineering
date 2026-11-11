@@ -34,3 +34,5 @@ The full requirements are in the RFP: [ie04_project2026_RFP.pdf](ie04_project202
 - `week-3/` – phase backlog, use-case diagram, class diagram
 - `week-4/` – system structure, screen design, database design, first code
 - `week-5/` – Phase 1 demo, tests, retrospective, Phase 2 plan
+- `week-6/` – Phase 2 backlog, updated models, scheduling design
+- `week-7/` – scheduling code, .ics export, automated tests
